@@ -2,7 +2,7 @@ const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
 const outputContainer = document.getElementById('output-container');
 const downloadZipBtn = document.getElementById('download-zip');
-const sizes = [16, 32, 48, 128, 512];
+const sizes = [16, 32, 48, 128, 192, 512];
 let iconBlobs = {}; 
 
 dropZone.addEventListener('click', () => fileInput.click());
