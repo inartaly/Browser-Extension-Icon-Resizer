@@ -29,13 +29,11 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-h1 { margin-top: 0; color: #fff; }
-
 .drop-zone {
     border: 2px dashed var(--border);
     border-radius: 8px;
-    padding: 50px 20px;
-    margin: 25px 0;
+    padding: 40px 20px;
+    margin: 20px 0;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.02);
     transition: all 0.2s ease;
@@ -43,48 +41,47 @@ h1 { margin-top: 0; color: #fff; }
 
 .drop-zone:hover {
     border-color: var(--accent);
-    background: rgba(88, 166, 255, 0.05);
 }
+
+.zip-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: opacity 0.2s;
+}
+
+.zip-btn:hover { opacity: 0.9; }
 
 .output-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 15px;
-    margin-top: 20px;
 }
 
 .icon-card {
     background: #0d1117;
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     border: 1px solid var(--border);
 }
 
 .icon-card img {
-    display: block;
-    margin: 0 auto 10px;
-    background: white; /* Helps see transparent icons */
+    background: white;
     border-radius: 4px;
-}
-
-.download-btn {
-    display: block;
-    padding: 6px;
-    background: var(--success);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .footer {
-    margin-top: 40px;
+    margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid var(--border);
 }
 
-.bmc-button img {
-    height: 40px !important;
-    width: auto !important;
-}
+.bmc-button img { height: 40px; }
