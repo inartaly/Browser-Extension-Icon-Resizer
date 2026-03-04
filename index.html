@@ -2,56 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
-    <title>Browser Extension Icon Resizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Icon Resizer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0d1117">
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
-<body class="theme-dark">
-    <div id="app">
-        <div class="view view-main">
-            <div class="page">
-                <div class="navbar">
-                    <div class="navbar-bg"></div>
-                    <div class="navbar-inner">
-                        <div class="title">Browser Extension Icon Resizer</div>
-                    </div>
-                </div>
+<body>
+    <div class="app-card">
+        <header>
+            <h1>Icon Maker</h1>
+            <p>Generate 16px to 512px extension icons</p>
+        </header>
 
-                <div class="page-content">
-                    <div class="block">
-                        <p>Generate icons from 16px up to 512px for your browser extensions.</p>
-                        
-                        <div class="card card-outline">
-                            <div class="card-content card-content-padding">
-                                <div id="drop-zone" class="drop-zone">
-                                    <span>Drag & Drop or Click to Upload</span>
-                                    <input type="file" id="file-input" accept="image/*" hidden>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button id="download-zip" class="button button-fill button-large color-blue" style="display: none; margin: 20px 0;">
-                            Download All Icons (.zip)
-                        </button>
-
-                        <div id="output-container" class="row"></div>
-                    </div>
-
-                    <div class="block text-align-center" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #30363d;">
-                        <a href="https://www.buymeacoffee.com/inartaly" target="_blank">
-                            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px;">
-                        </a>
-                    </div>
-                </div>
+        <div id="drop-zone" class="drop-zone">
+            <div class="dz-inner">
+                <span class="dz-icon">＋</span>
+                <span>Drop image or click</span>
             </div>
+            <input type="file" id="file-input" accept="image/*" hidden>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/framework7@8/framework7-bundle.min.js"></script>
+        <button id="download-zip" class="main-btn" style="display: none;">
+            Download All Icons (.zip)
+        </button>
+
+        <div id="output-container" class="preview-grid"></div>
+
+        <footer>
+            <a href="https://www.buymeacoffee.com/inartaly" target="_blank">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee">
+            </a>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
