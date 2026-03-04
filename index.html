@@ -12,19 +12,20 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
-<body class="theme-dark"> <div id="app">
+<body class="theme-dark">
+    <div id="app">
         <div class="view view-main">
             <div class="page">
                 <div class="navbar">
                     <div class="navbar-bg"></div>
                     <div class="navbar-inner">
-                        <div class="title">Extension Icon Resizer</div>
+                        <div class="title">Icon Resizer</div>
                     </div>
                 </div>
 
                 <div class="page-content">
                     <div class="block">
-                        <p>Drop an image to generate 16px, 32px, 48px, 128px, 192px and 512px icons in a ZIP.</p>
+                        <p>Generate icons from 16px up to 512px for your browser extensions.</p>
                         
                         <div class="card card-outline">
                             <div class="card-content card-content-padding">
@@ -43,7 +44,7 @@
                     </div>
 
                     <div class="block text-align-center" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #30363d;">
-                        <a href="https://www.buymeacoffee.com/inartaly" target="_blank" class="bmc-button">
+                        <a href="https://www.buymeacoffee.com/inartaly" target="_blank">
                             <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px;">
                         </a>
                     </div>
@@ -54,10 +55,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/framework7@8/framework7-bundle.min.js"></script>
     <script src="script.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js');
-        }
-    </script>
 </body>
 </html>
