@@ -49,26 +49,15 @@ function createIcon(img, size) {
 
 downloadZipBtn.addEventListener('click', async () => {
     const zip = new JSZip();
-    const iconFolder = zip.folder("icons");
-
+    
+    // Add only the icons to the zip
     for (const [name, blob] of Object.entries(iconBlobs)) {
-        iconFolder.file(name, blob);
+        zip.file(name, blob);
     }
-
-    const manifest = {
-        "manifest_version": 3,
-        "name": "My Extension",
-        "version": "1.0",
-        "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
-        "action": { "default_popup": "popup.html" }
-    };
-
-    zip.file("manifest.json", JSON.stringify(manifest, null, 2));
-    zip.file("popup.html", "<html><body style='width:200px'><h2>Extension Pop-up</h2></body></html>");
 
     const content = await zip.generateAsync({type:"blob"});
     const link = document.createElement('a');
     link.href = URL.createObjectURL(content);
-    link.download = "extension-boilerplate.zip";
+    link.download = "chrome-extension-icons.zip";
     link.click();
 });
