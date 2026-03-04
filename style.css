@@ -52,3 +52,19 @@ body {
     display: inline-block;
     margin-top: 10px;
 }
+
+.footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border); /* Matches the GitHub Dark theme we set up */
+    display: flex;
+    justify-content: center;
+}
+
+.bmc-button {
+    transition: transform 0.2s ease;
+}
+
+.bmc-button:hover {
+    transform: scale(1.05);
+}
