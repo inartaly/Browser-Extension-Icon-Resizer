@@ -1,6 +1,6 @@
 {
-  "name": "Extension Icon Maker",
-  "short_name": "IconMaker",
+  "name": "Browser Extension Icon Resizer",
+  "short_name": "Icon Resizer",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0d1117",
