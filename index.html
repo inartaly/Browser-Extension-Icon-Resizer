@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension Icon Maker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4285f4">
+</head>
+<body>
+    <div class="container">
+        <h1>Extension Icon Maker</h1>
+        <p>Drop an image to generate 16, 32, 48, and 128px PNGs.</p>
+        
+        <div id="drop-zone" class="drop-zone">
+            <span>Drag & Drop or Click to Upload</span>
+            <input type="file" id="file-input" accept="image/*" hidden>
+        </div>
+
+        <div id="output-container" class="output-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
+</body>
+</html>
