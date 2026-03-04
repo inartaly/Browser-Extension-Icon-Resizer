@@ -1,16 +1,15 @@
 :root {
-    --bg: #010409;
+    --bg: #0d1117;
     --surface: #161b22;
     --border: #30363d;
     --text: #c9d1d9;
     --accent: #58a6ff;
-    --glow: rgba(88, 166, 255, 0.15);
 }
 
 body {
-    background: radial-gradient(circle at center, #0d1117 0%, #010409 100%);
+    background-color: #010409;
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, system-ui, sans-serif;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -21,35 +20,35 @@ body {
 .app-container {
     background: var(--surface);
     width: 90%;
-    max-width: 420px;
-    padding: 2.5rem;
+    max-width: 500px; /* Widened for better balance */
+    padding: 2rem;
     border-radius: 24px;
     border: 1px solid var(--border);
-    box-shadow: 0 0 40px rgba(0,0,0,0.8), 0 0 20px var(--glow);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
     text-align: center;
-    transition: transform 0.3s ease;
 }
 
-/* Make the drop zone feel more interactive */
+h1 { font-size: 1.6rem; margin-bottom: 8px; color: #fff; }
+p { font-size: 0.95rem; opacity: 0.7; margin-bottom: 25px; }
+
 .drop-zone {
-    border: 2px dashed #484f58;
+    border: 2px dashed var(--border);
     border-radius: 16px;
-    padding: 50px 20px;
-    margin: 25px 0;
-    background: rgba(255,255,255,0.02);
+    padding: 40px 20px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    background: rgba(255,255,255,0.02);
+    transition: 0.2s ease;
+    margin-bottom: 20px;
 }
 
 .drop-zone:hover {
     border-color: var(--accent);
     background: rgba(88, 166, 255, 0.05);
-    box-shadow: inset 0 0 10px var(--glow);
 }
 
 .primary-btn {
-    background: linear-gradient(135deg, #58a6ff 0%, #1f6feb 100%);
-    color: white;
+    background: var(--accent);
+    color: #fff;
     border: none;
     padding: 16px;
     border-radius: 12px;
@@ -57,32 +56,48 @@ body {
     font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(31, 111, 235, 0.4);
-    transition: transform 0.2s;
+    margin-bottom: 25px;
+    transition: transform 0.1s;
 }
 
 .primary-btn:active { transform: scale(0.98); }
 
+/* Improved Grid: 2 columns so icons can be larger */
 .icon-preview-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
 }
 
 .icon-card {
-    background: rgba(0,0,0,0.3);
-    padding: 10px;
-    border-radius: 12px;
+    background: #0d1117;
+    padding: 15px;
+    border-radius: 16px;
     border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .icon-card img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+    max-width: 64px; /* Doubled the size from your current version */
+    height: auto;
+    background: white; /* Contrast for transparent icons */
+    border-radius: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.icon-card small {
+    font-weight: 600;
+    opacity: 0.8;
 }
 
 footer {
     margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
 }
+
+.bmc-link img { height: 40px; }
