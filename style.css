@@ -32,3 +32,28 @@
     display: block;
     margin: 0 auto 8px;
 }
+
+/* Limit the width on desktop so it doesn't stretch too far */
+@media (min-min-width: 768px) {
+  .page-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Ensure the drop zone has a fixed, sensible height */
+.drop-zone {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fix the icon preview layout */
+.icon-card {
+  margin-top: 10px;
+  padding: 10px;
+  background: #161b22;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
