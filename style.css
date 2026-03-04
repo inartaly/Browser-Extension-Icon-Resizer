@@ -1,59 +1,85 @@
 :root {
-    --f7-theme-color: #58a6ff; /* GitHub Blue */
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --accent: #58a6ff;
 }
+
+body {
+    background-color: #010409;
+    color: var(--text);
+    font-family: -apple-system, system-ui, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.app-container {
+    background: var(--surface);
+    width: 100%;
+    max-width: 400px; /* Essential for the "App" look */
+    min-height: 600px;
+    padding: 2rem;
+    border-radius: 28px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 { font-size: 1.5rem; margin-bottom: 4px; color: #fff; }
+p { font-size: 0.9rem; opacity: 0.6; margin-top: 0; }
 
 .drop-zone {
-    border: 2px dashed #30363d;
-    border-radius: 8px;
-    padding: 60px 20px;
-    text-align: center;
+    border: 2px dashed var(--border);
+    border-radius: 20px;
+    padding: 40px 10px;
+    margin: 20px 0;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.02);
-    transition: border-color 0.3s;
+    background: rgba(255,255,255,0.02);
+    transition: 0.2s ease;
 }
 
-.drop-zone:hover {
-    border-color: var(--f7-theme-color);
+.drop-zone:hover { border-color: var(--accent); background: rgba(88, 166, 255, 0.05); }
+
+.primary-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 14px;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-/* Formatting for the generated icon previews */
+.icon-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
 .icon-card {
     background: #0d1117;
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    font-size: 10px;
     text-align: center;
 }
 
 .icon-card img {
+    width: 32px;
+    height: 32px;
     background: white;
     border-radius: 4px;
-    display: block;
-    margin: 0 auto 8px;
+    margin-bottom: 4px;
 }
 
-/* Limit the width on desktop so it doesn't stretch too far */
-@media (min-min-width: 768px) {
-  .page-content {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
-
-/* Ensure the drop zone has a fixed, sensible height */
-.drop-zone {
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Fix the icon preview layout */
-.icon-card {
-  margin-top: 10px;
-  padding: 10px;
-  background: #161b22;
-  border-radius: 8px;
-  border: 1px solid #30363d;
-}
+footer { margin-top: auto; padding-top: 20px; }
+.bmc-link img { height: 35px; }
