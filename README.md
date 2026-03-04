@@ -1,0 +1,1 @@
+# Browser-Extension-Icon-Resizer
