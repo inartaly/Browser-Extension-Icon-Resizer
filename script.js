@@ -1,3 +1,4 @@
+const app = new Framework7({ el: '#app', theme: 'auto' });
 const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
 const outputContainer = document.getElementById('output-container');
