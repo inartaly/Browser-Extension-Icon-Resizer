@@ -2,37 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extension Icon Maker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Browser Extension Icon Resizer</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@8/framework7-bundle.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0d1117">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 </head>
-<body>
-    <div class="container">
-        <h1>Extension Icon Resizer</h1>
-        <p>Drop an image to generate 16px, 32px, 48px, 128px, 192px and 512px icons in a ZIP.</p>
-        
-        <div id="drop-zone" class="drop-zone">
-            <span>Drag & Drop or Click to Upload</span>
-            <input type="file" id="file-input" accept="image/*" hidden>
-        </div>
+<body class="theme-dark"> <div id="app">
+        <div class="view view-main">
+            <div class="page">
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="title">Extension Icon Resizer</div>
+                    </div>
+                </div>
 
-        <button id="download-zip" class="zip-btn" style="display: none;">Download All Icons (.zip)</button>
+                <div class="page-content">
+                    <div class="block">
+                        <p>Drop an image to generate 16px, 32px, 48px, 128px, 192px and 512px icons in a ZIP.</p>
+                        
+                        <div class="card card-outline">
+                            <div class="card-content card-content-padding">
+                                <div id="drop-zone" class="drop-zone">
+                                    <span>Drag & Drop or Click to Upload</span>
+                                    <input type="file" id="file-input" accept="image/*" hidden>
+                                </div>
+                            </div>
+                        </div>
 
-        <div id="output-container" class="output-grid"></div>
+                        <button id="download-zip" class="button button-fill button-large color-blue" style="display: none; margin: 20px 0;">
+                            Download All Icons (.zip)
+                        </button>
 
-        <div class="footer">
-            <a href="https://www.buymeacoffee.com/inartaly" target="_blank" class="bmc-button">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee">
-            </a>
+                        <div id="output-container" class="row"></div>
+                    </div>
+
+                    <div class="block text-align-center" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #30363d;">
+                        <a href="https://www.buymeacoffee.com/inartaly" target="_blank" class="bmc-button">
+                            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/framework7@8/framework7-bundle.min.js"></script>
     <script src="script.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
