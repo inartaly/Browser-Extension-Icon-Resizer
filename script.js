@@ -200,3 +200,25 @@ snapshotZipBtn.addEventListener("click", async () => {
   link.download = "extension-snapshots.zip";
   link.click();
 });
+
+// ---------------- INSTALL APP BUTTON ----------------
+
+let deferredPrompt;
+const installButton = document.getElementById("installButton");
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installButton.style.display = "block";
+});
+
+installButton.addEventListener("click", async () => {
+  if (!deferredPrompt) return;
+
+  deferredPrompt.prompt();
+  const result = await deferredPrompt.userChoice;
+
+  deferredPrompt = null;
+  installButton.style.display = "none";
+});
+
