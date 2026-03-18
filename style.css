@@ -132,7 +132,7 @@ footer img {
 }
 
 .install-btn {
-  background: #2ea043; /* GitHub green */
+  background: #2ea043;
   color: white;
   border: none;
   padding: 10px 18px;
@@ -141,7 +141,6 @@ footer img {
   font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
-  width: auto;
   display: inline-block;
   box-shadow: 0 2px 6px rgba(0,0,0,0.25);
   transition: background 0.2s ease;
@@ -150,6 +149,7 @@ footer img {
 .install-btn:hover {
   background: #238636;
 }
+
 
 
 /* Mobile Adjustments */
