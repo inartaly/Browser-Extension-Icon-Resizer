@@ -1,41 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Browser Extension Icon Resizer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0d1117">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0d1117" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app-card">
-        <header>
-            <h1>Browser Extension Icon Resizer</h1>
-            <p>Generate 16px to 512px extension icons</p>
-        </header>
+      <header>
+        <h1>Browser Extension Icon Resizer</h1>
+        <p>Generate 16px to 512px extension icons</p>
+      </header>
 
-        <div id="drop-zone" class="drop-zone">
-            <div class="dz-inner">
-                <span class="dz-icon">＋</span>
-                <span>Drop image or click</span>
-            </div>
-            <input type="file" id="file-input" accept="image/*" hidden>
+      <div id="drop-zone" class="drop-zone">
+        <div class="dz-inner">
+          <span class="dz-icon">＋</span>
+          <span>Drop image or click</span>
+        </div>
+        <input type="file" id="file-input" accept="image/*" hidden />
+      </div>
+
+      <button id="download-zip" class="main-btn" style="display: none">
+        Download All Icons (.zip)
+      </button>
+
+      <div id="output-container" class="preview-grid"></div>
+
+      <section id="snapshot-section">
+        <h2>Extension Snapshots (Optional)</h2>
+
+        <div class="drop-zone" id="snapshot-drop">
+          <div class="dz-inner">
+            <span class="dz-icon">＋</span>
+            <span>Drop screenshot or click</span>
+          </div>
+          <input type="file" id="snapshot-input" accept="image/*" hidden />
         </div>
 
-        <button id="download-zip" class="main-btn" style="display: none;">
-            Download All Icons (.zip)
-        </button>
+        <div id="snapshot-results"></div>
+      </section>
+      <button id="download-snapshot-zip" class="main-btn" style="display: none">
+        Download Snapshots (.zip)
+      </button>
 
-        <div id="output-container" class="preview-grid"></div>
-
-        <footer>
-            <a href="https://www.buymeacoffee.com/inartaly" target="_blank">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee">
-            </a>
-        </footer>
+      <footer>
+        <a href="https://www.buymeacoffee.com/inartaly" target="_blank">
+          <img
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+            alt="Buy Me A Coffee"
+          />
+        </a>
+      </footer>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
