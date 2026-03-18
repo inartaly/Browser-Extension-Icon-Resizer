@@ -132,7 +132,7 @@ footer img {
 }
 
 .install-btn {
-  background: #2ea043; /* GitHub green */
+  background: #2ea043;
   color: white;
   border: none;
   padding: 14px 26px;
@@ -140,17 +140,20 @@ footer img {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  width: 100%; /* match .main-btn */
-  margin-top: 25px; /* match spacing */
-  transition: 0.2s;
-  box-shadow: 0 4px 15px rgba(46, 160, 67, 0.3);
+  width: 100%; /* match your other buttons */
+  margin-top: 30px; /* add breathing room */
+  margin-bottom: 10px; /* optional, keeps it balanced */
+  display: block; /* ensures centering + full width */
   text-align: center;
+  box-shadow: 0 4px 15px rgba(46, 160, 67, 0.3);
+  transition: 0.2s ease;
 }
 
 .install-btn:hover {
   background: #238636;
   transform: translateY(-2px);
 }
+
 
 /* Mobile Adjustments */
 @media (max-width: 480px) {
