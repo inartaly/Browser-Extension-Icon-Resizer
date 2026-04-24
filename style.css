@@ -165,3 +165,8 @@ footer img {
   }
 }
 
+.dz-inner {
+  pointer-events: none;
+}
+
+
